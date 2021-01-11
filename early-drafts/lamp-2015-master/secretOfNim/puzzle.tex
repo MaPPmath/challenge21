@@ -1,0 +1,131 @@
+%!TEX root = ../booklet.tex
+% ^ leave for LaTeXTools build functionality
+
+\begin{metapuzzle}{The Secret of Rook Away}{Overview}
+  Great job on completing your first Puzzle! You're now able to start work on
+  the Metapuzzle.
+
+  \vfill
+
+  \centerImg{\linewidth}{secretOfNim/exampleBoard.pdf}
+
+  \vfill
+
+  The game \textbf{Rook Away} is played with two players (Red and Blue),
+  two rooks, and two chessboards.
+  Player Red begins by placing the white rook on the left board,
+  and the black rook on the right board.
+  Then each player takes turns moving exactly one rook (either white or black)
+  one or more spaces left or down (but not right, up, or diagonally),
+  starting with Player Blue. Rooks may not be moved beyond the edge
+  of the board, and the player who
+  starts his or her turn without any legal moves loses the game.
+
+  We've numbered the rows and columns $0$ through $7$.
+  Here's an example of a playthrough where the first player (red) positions
+  the white rook at $(4,3)$ and the black rook at $(1,7)$.
+
+  \vfill
+
+  \newpage
+
+  \centerImg{\linewidth}{secretOfNim/exampleGame.pdf}
+
+  Note that Player Red wins this game, since there are no
+  more legal moves for Player Blue to make.
+
+  \newpage
+
+  For the Metapuzzle, your team must figure out unbeatable strategies
+  for the \textit{first player} which follow different starting moves.
+  Such strategies must guarantee
+  he or she will win the game \textit{no matter what the second player does}.
+  For example, a strategy might be ``after positioning both rooks on a
+  black square, always choose to move a rook which reduces one of the largest
+  coordinates by one''.
+
+  To solve this challenge, go to Game HQ and describe your
+  unbeatable strategies to the organizer. Depending on how clever your
+  solution is, your team will earn points:
+
+  \begin{itemize}
+    \item \textbf{50 points} for unbeatable strategies covering
+    \(64\) to \(175\) different starting positions.
+    \item \textbf{100 points} for unbeatable strategies covering
+    for \(176\) to \(511\) different starting positions.
+    \item \textbf{200 points} for unbeatable strategies covering
+    for \(512\) different starting positions (the maximum such number)
+  \end{itemize}
+
+  Your team will earn an extra Hint to this Metapuzzle for each additional
+  Puzzle you solve. If you have questions about the rules of Rook Away or this
+  Metapuzzle, feel free to ask the organizer. This one's tough, so good luck!
+
+\end{metapuzzle}
+
+
+
+\begin{metapuzzle}{The Secret of Rook Away}{Hint 1 of 3}
+  Remember that your team
+  is allowed to submit multiple solutions, so don't worry about if your
+  solution is ``clever'' enough before submitting it. You can always
+  improve it later, and the organizer will determine how many starting
+  positions your strategy covers.
+
+  \vspace{3em}
+
+  Oh right, you wanted a hint.
+  \textbf{The \(50\) and \(100\) point solutions we've thought of
+  both follow what you might call a ``copycat'' strategy.}
+
+\end{metapuzzle}
+
+
+
+\begin{metapuzzle}{The Secret of Rook Away}{Hint 2 of 3}
+  Did you get \(50\) points yet at least? \textbf{There's \(8^2=64\) ways to
+  position both rooks on the diagonals of each chessboard, by the way.}
+
+  \noindent
+  Hey, we know it seems off-topic, but here's a couple of definitions for you.
+
+  \begin{itemize}
+    \item ``A Base-ic Puzzle'' uses various number bases. A particularly useful
+          number base is the \textbf{binary} or \textbf{base-2} system. For
+          example, $10111_2=1\times 2^4+0\times 2^3+1\times 2^2+1\times 2+1=23$.
+
+    \item A computer using binary might perform what's called the
+          ``\textbf{exclusive or}'' operation $\oplus$, which swaps the
+          $0$'s and $1$'s in the first number's binary expression whenever the
+          corresponding digit in the second number's binary expression is a $1$,
+          and leaves it the same otherwise.
+          For example:
+
+      \[19 \oplus 10 = 10011_2 \oplus 01010_2 = 11001_2 = 25\]
+      \[5 \oplus 6 = 101_2 \oplus 110_2 = 011_2 = 3\]
+      \[27 \oplus 35 = 011011_2 \oplus 100011_2 = 111000_2 = 56\]
+      \[9 \oplus 13 = 1001_2 \oplus 1101_2 = 0100_2 = 4\]
+  \end{itemize}
+
+  So what? Well, there's a reason we numbered the rows and columns of the
+  chessboard $0$ through $7$. Or should I say $000_2$ through $111_2$?
+
+\end{metapuzzle}
+
+
+
+\begin{metapuzzle}{The Secret of Rook Away}{Hint 3 of 3}
+  Here's your final hint to help you wrap up this mathematical
+  challenge. \textbf{There are \(8^3=512\) ways for Player Red
+  to position a white rook at
+  \((A,B)\) and a black rook at \((C,D)\) such that
+  \(A\oplus B\oplus C\oplus D=0\).}
+
+  \vspace{3em}
+
+  Feel free to bounce any ideas you have off the game organizer; even if your
+  solution isn't perfect, you might learn something to help get it there.
+  You're almost done! We hope you've had fun playing, and good luck on this
+  last puzzle. :-)
+
+\end{metapuzzle}

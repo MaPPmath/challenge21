@@ -1,0 +1,106 @@
+\documentclass[12pt]{amsart}
+\synctex=1
+\setcounter{page}{1}
+
+\hoffset=-.75in
+\textwidth=6.5in
+\voffset=-.5in
+\textheight=9.0in
+
+%\setlength{\textwidth}{4.4in}
+%\setlength{\textheight}{7.0in}
+%\setlength{\evensidemargin}{1in}
+%\setlength{\oddsidemargin}{1in}
+%\setlength{\topmargin}{.8in}
+
+\usepackage{ulem}
+\usepackage{xcolor}
+
+\newtheorem{theorem}{Theorem}%[section]
+\newtheorem{lemma}[theorem]{Lemma}
+
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{question}[theorem]{Question}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{proposition}[theorem]{Proposition}
+
+\definecolor{mygray}{gray}{0.8}
+
+
+\begin{document}
+
+
+
+
+\title{Sudoku City}
+
+
+\maketitle
+
+\thispagestyle{empty}
+
+
+
+
+\begin{center}\Large
+\begin{tabular}{c||c|c|c||c|c|c||c|c|c||c}
+  & 3\(\downarrow\) & 2\(\downarrow\) & 4\(\downarrow\) & 1\(\downarrow\) & 2\(\downarrow\) & 5\(\downarrow\) & 3\(\downarrow\) & 3\(\downarrow\) & 3\(\downarrow\) &   \\\hline\hline
+3\(\rightarrow\) &   & \color{mygray}{$\clubsuit$} & 1 &   &   &   & 5 &   &   & \(\leftarrow\)3 \\\hline
+2\(\rightarrow\) &   &   & 5 &   & \color{mygray}{$\heartsuit$} &   & 2 &   & \color{mygray}{$\clubsuit$} & \(\leftarrow\)3 \\\hline
+4\(\rightarrow\) & 3 & 4 & 8 & 7 & 2 & 5 & 1 & 9 & 6 & \(\leftarrow\)2 \\\hline\hline
+1\(\rightarrow\) &   &   & 6 & \color{mygray}{$\clubsuit$} &   &   & 7 &   &   & \(\leftarrow\)5 \\\hline
+3\(\rightarrow\) & \color{mygray}{$\diamondsuit$} &   & 2 & \color{mygray}{$\heartsuit$} &   & \color{mygray}{$\spadesuit$} & 3 & \color{mygray}{$\nabla$} &   & \(\leftarrow\)2 \\\hline
+2\(\rightarrow\) &   & \color{mygray}{$\star$} & 7 &   &   &   & 9 &   & \color{mygray}{$\diamondsuit$} & \(\leftarrow\)3 \\\hline\hline
+4\(\rightarrow\) & 6 & 7 & 3 & 5 & 1 & 8 & 4 & 2 & 9 & \(\leftarrow\)1 \\\hline
+3\(\rightarrow\) &   & \color{mygray}{$\heartsuit$} & 4 &   & \color{mygray}{$\nabla$} &   & 6 & \color{mygray}{$\spadesuit$} &   & \(\leftarrow\)3 \\\hline
+3\(\rightarrow\) &   &   & 9 &   &   & \color{mygray}{$\diamondsuit$} & 8 &   &   & \(\leftarrow\)4 \\\hline\hline
+  & 5\(\uparrow\) & 3\(\uparrow\) & 1\(\uparrow\) & 3\(\uparrow\) & 3\(\uparrow\) & 2\(\uparrow\) & 2\(\uparrow\) & 2\(\uparrow\) & 2\(\uparrow\) &
+\end{tabular}
+\end{center}
+
+\vspace{.5in}
+
+\begin{center}
+\begin{tabular}{c c c c c c}
+ & \\
+\underline{\phantom{xyz}} & \underline{\phantom{xyz}} & \underline{\phantom{xyz}} & \underline{\phantom{xyz}} & \underline{\phantom{xyz}} & \underline{\phantom{xyz}}\\
+$\nabla$ & $\heartsuit$ & $\clubsuit$ & $\diamondsuit$ & $\star$ & $\spadesuit$
+\end{tabular}
+\end{center}
+
+\newpage
+
+Solution:
+\begin{center}\Large
+\begin{tabular}{c||c|c|c||c|c|c||c|c|c||c}
+  & 3\(\downarrow\) & 2\(\downarrow\) & 4\(\downarrow\) & 1\(\downarrow\) & 2\(\downarrow\) & 5\(\downarrow\) & 3\(\downarrow\) & 3\(\downarrow\) & 3\(\downarrow\) &   \\\hline\hline
+3\(\rightarrow\) & 2 & $6_\clubsuit$ & 1 & 9 & 8 & 4 & 5 & 3 & 7 & \(\leftarrow\)3 \\\hline
+2\(\rightarrow\) & 7 & 9 & 5 & 3 & $6_\heartsuit$ & 1 & 2 & 8 & $4_\clubsuit$ & \(\leftarrow\)3 \\\hline
+4\(\rightarrow\) & 3 & 4 & 8 & 7 & 2 & 5 & 1 & 9 & 6 & \(\leftarrow\)2 \\\hline\hline
+1\(\rightarrow\) & 9 & 3 & 6 & $8_\clubsuit$ & 5 & 2 & 7 & 4 & 1 & \(\leftarrow\)5 \\\hline
+3\(\rightarrow\) & $4_\diamondsuit$ & 5 & 2 & $1_\heartsuit$ & 9 & $7_\spadesuit$ & 3 & $6_\nabla$ & 8 & \(\leftarrow\)2 \\\hline
+2\(\rightarrow\) & 8 & $1_\star$ & 7 & 4 & 3 & 6 & 9 & 5 & $2_\diamondsuit$ & \(\leftarrow\)3 \\\hline\hline
+4\(\rightarrow\) & 6 & 7 & 3 & 5 & 1 & 8 & 4 & 2 & 9 & \(\leftarrow\)1 \\\hline
+3\(\rightarrow\) & 5 & $8_\heartsuit$ & 4 & 2 & $7_\nabla$ & 9 & 6 & $1_\spadesuit$ & 3 & \(\leftarrow\)3 \\\hline
+3\(\rightarrow\) & 1 & 2 & 9 & 6 & 4 & $3_\diamondsuit$ & 8 & 7 & 5 & \(\leftarrow\)4 \\\hline\hline
+  & 5\(\uparrow\) & 3\(\uparrow\) & 1\(\uparrow\) & 3\(\uparrow\) & 3\(\uparrow\) & 2\(\uparrow\) & 2\(\uparrow\) & 2\(\uparrow\) & 2\(\uparrow\) &
+\end{tabular}
+\end{center}
+
+\vspace{.5in}
+
+\begin{center}
+\begin{tabular}{c c c c c c}
+M & O & R & I & A & H\\
+\underline{\phantom{xyz}} & \underline{\phantom{xyz}} & \underline{\phantom{xyz}} & \underline{\phantom{xyz}} & \underline{\phantom{xyz}} & \underline{\phantom{xyz}}\\
+$\nabla$ & $\heartsuit$ & $\clubsuit$ & $\diamondsuit$ & $\star$ & $\spadesuit$
+\end{tabular}
+\end{center}
+
+% Solves to MORIAH
+
+
+
+\end{document}

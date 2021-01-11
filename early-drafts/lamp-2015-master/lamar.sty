@@ -1,0 +1,36 @@
+\setEventName{Lamar Mathematical Puzzle (LaMP) Challenge}
+
+\setLogoPath{lamarLogo.jpg}
+
+\usepackage{tikz}
+
+\newcommand{\letterBox}[1]{
+  \begin{tikzpicture}
+    \draw (0,0) -- (2em,0) -- (2em,2em) -- (0,2em) -- (0,0);
+    \node at (1em,-1em) {#1};
+  \end{tikzpicture}
+}
+
+\newenvironment{rules}
+  { %before
+\newpage
+\puzzleHeader{LaMP Challenge}{Overview and Rules}{~}
+  }{ %after
+
+}
+
+\newenvironment{printList}
+  { %before
+\newpage
+\puzzleHeader{~}{Printing and Supplies}{~}
+  }{ %after
+
+}
+
+\newenvironment{metapuzzle}[2]
+  { %before
+\newpage
+\puzzleHeader{Metapuzzle}{#1}{#2}
+  }{ %after
+
+}

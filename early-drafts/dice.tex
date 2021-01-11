@@ -1,0 +1,136 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+
+\usepackage{pifont}
+\DeclareFontFamily{U}{dice3d}{}
+\DeclareFontShape{U}{dice3d}{m}{n}{<-> s*[20] dice3d}{}
+\usepackage{tikz}
+
+\newcommand{\die}[2]{
+\begin{scope}[shift={(#1)}]
+\fill[color=white] (0,0.2) -- (0.2,0) -- (0.9,0) -- (0.95,0.1) -- (0.95,1)
+  -- (0.03,3.65) -- (-0.9,3.7) -- (-0.9,2.85);
+\node[anchor=south west] at (0,0) {\usefont{U}{dice3d}{m}{n}{#2}};
+\end{scope}
+}
+\newcommand{\diegridcustom}[2]{
+\begin{tikzpicture}[every node/.style={inner sep=0,outer sep=0},scale=1.34,y={(0.35355,0.35355,0)}]
+\foreach \x in {0,1,...,#2} {
+\draw[thick] (0,\x) -- (#2,\x);
+\draw[thick] (\x,0) -- (\x,#2);
+}
+#1
+\end{tikzpicture}
+}
+\newcommand{\diegrid}[1]{\diegridcustom{#1}{4}}
+
+\begin{document}
+\begin{center}
+\diegrid{
+    \die{0,2}{1d}
+    \die{2,3}{3a}
+}
+\diegrid{
+    \die{0,1}{6a}
+    \die{3,3}{5a}
+}
+
+\diegrid{
+    \die{0,1}{4b}
+    \die{2,3}{5a}
+}
+\diegrid{
+    \die{1,1}{2b}
+    \die{3,3}{1b}
+}
+
+\diegrid{
+    \die{0,2}{4c}
+    \die{2,3}{2a}
+}
+\diegrid{
+    \die{1,1}{2d}
+    \die{2,2}{1b}
+}
+
+\diegrid{
+    \die{0,1}{5a}
+    \die{1,3}{2b}
+}
+\diegrid{
+    \die{1,1}{4d}
+    \die{3,2}{2d}
+}
+
+\diegrid{
+    \die{1,1}{2c}
+    \die{2,2}{4b}
+}
+\diegrid{
+    \die{1,2}{3d}
+    \die{3,3}{2c}
+}
+
+\diegrid{
+    \die{1,1}{2a}
+    \die{2,2}{2a}
+}
+\diegrid{
+    \die{1,1}{4d}
+    \die{3,3}{1b}
+}
+\end{center}
+
+\newpage
+
+Flavortext:
+
+One of the Designer's hobbies
+was dice games. Strangely, it's said that
+they would spend hours simply rolling
+a die across a grid, muttering
+"all that matters is the pips
+I can see". We believe that
+one of their passwords is named after
+a city location where the Designer
+would play such dice games.
+
+In the illustration below, the
+upper die may be obtained by
+rolling the lower die one space
+up the grid,
+then one space right.
+Or it could be obtained by moving
+left, down, right, up, up,  up,
+right, down, left, up,
+right, and down.
+%But I'm not sure what
+%that T is supposed to mean..
+
+
+%The second illustration shows many
+%other examples: any die shown may
+%be rolled into any other position.
+Many things are possible in The Array,
+but maybe not every dice roll is...
+
+\begin{center}
+\diegrid{
+    \die{1,1}{1a}
+    \die{2,2}{4d}
+}
+
+%T
+
+%\vspace{1em}
+
+%\diegridcustom{
+%    \die{1,0}{1d}
+%    \die{3,4}{2c}
+%    \die{5,0}{3a}
+%    \die{6,2}{4c}
+%    \die{0,6}{5a}
+%    \die{4,7}{6d}
+%}{8}
+\end{center}
+\end{document}

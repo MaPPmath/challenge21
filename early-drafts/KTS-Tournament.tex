@@ -1,0 +1,107 @@
+\documentclass[12pt]{amsart}
+\synctex=1
+\setcounter{page}{1}
+
+\hoffset=-.75in
+\textwidth=7in
+\voffset=-.5in
+\textheight=9.0in
+
+%\setlength{\textwidth}{4.4in}
+%\setlength{\textheight}{7.0in}
+%\setlength{\evensidemargin}{1in}
+%\setlength{\oddsidemargin}{1in}
+%\setlength{\topmargin}{.8in}
+
+\usepackage{ulem}
+\usepackage{xcolor}
+
+\newtheorem{theorem}{Theorem}%[section]
+\newtheorem{lemma}[theorem]{Lemma}
+
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{question}[theorem]{Question}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{proposition}[theorem]{Proposition}
+
+\definecolor{mygray}{gray}{0.8}
+
+
+\begin{document}
+
+\title{Tournament Completion}
+
+\maketitle
+
+\thispagestyle{empty}
+
+The human's in the Matrix need to spend their evenings together for safety. However gathering in large numbers is equally as dangerous to their overall mission of saving the human race! To pass the time they play weekly tournaments where every one plays a game against every other human exactly once. There is only enough time for three games in the evening, so they gather in pods of three each night for each person to play a game against each person they are bunking with. There are a total of 15 humans in the tournament and we have obtained a partial schedule of the weekly tournament. Somehow there is a hidden password in the title of the days in the tournament, so can you complete the tournament schedule to reveal the password. (We think each sleeping pod is listed in numerical order!)
+
+\begin{center}
+\begin{tabular}{| c | c | c | c |}
+Night 1: & Night 2: & Night 3: & Night 4:\\
+HOWDOTHEYPLAYUS & CAUSEFORCONCERN & KEEPSPIRITSHIGH & ESCAPEFROMPERIL \\
+
+\hline \hline 
+ \underline{ 1 } - \underline{ 2 } - \underline{ 3 } &  
+ \underline{ 1 } - \underline{ \hspace{.1in} } - \underline{ 5 } &  
+\underline{ \hspace{.1in} } - \underline{ 6 } - \underline{ 7 } &  
+\underline{ 1 } - \underline{ \hspace{.1in} } - \underline{ 9 }\\
+ \hline
+\underline{ \textcircled{\hspace{.1in}} } - \underline{ \hspace{.1in} } - \underline{ \hspace{.1in} }&
+\underline{ \hspace{.1in} } - \underline{ \hspace{.1in} } - \underline{ \hspace{.1in} } &  
+\underline{ 2 } - \underline{ 9 } - \underline{ 11 } &  
+\underline{ \hspace{.1in} } - \underline{ 12 } - \underline{ \hspace{.1in} }\\
+ \hline
+ \underline{ 5 } - \underline{ \hspace{.1in} } - \underline{ \hspace{.1in} }&  
+ \underline{ 3 } - \underline{ 13 } - \underline{ \hspace{.1in} } &  
+ \underline{ \textcircled{\hspace{.1in}} } - \underline{ \hspace{.1in} } - \underline{ \hspace{.1in} } &  
+ \underline{ \hspace{.1in} } - \underline{ \hspace{.1in} } - \underline{ 6 }\\
+ \hline
+ \underline{ \hspace{.1in} } - \underline{ \hspace{.1in} } - \underline{ 13 }&  
+ \underline{ \hspace{.1in} } - \underline{ 9 } - \underline{ \textcircled{\hspace{.1in}} } &  
+ \underline{ \hspace{.1in} } - \underline{ 10 } - \underline{ \hspace{.1in} } &  
+ \underline{ \textcircled{\hspace{.1in}} } - \underline{ \hspace{.1in} } - \underline{ \hspace{.1in} }\\
+ \hline
+ \underline{ \hspace{.1in} } - \underline{ 9 } - \underline{ 15 }&  
+ \underline{ \hspace{.1in} } - \underline{ \hspace{.1in} } - \underline{ \hspace{.1in} } &  
+ \underline{ \hspace{.1in} } - \underline{ \hspace{.1in} } - \underline{ 13 } &  
+ \underline{ 7 } - \underline{ 10 } - \underline{ 13 }\\
+ \hline
+\end{tabular}
+\end{center}
+
+
+
+\begin{center}
+\begin{tabular}{| c | c | c |}
+Night 5: & Night 6: & Night 7: \\
+REMEMBERTHECALL & THEBOTSARECLOSE & WENEEDOURHEALTH   \\
+
+\hline \hline 
+ \underline{ \hspace{.1in} } - \underline{ 10 } - \underline{ 11 } &  
+ \underline{ 1 } - \underline{ \hspace{.1in} } - \underline{ 13 } &  
+\underline{ 1 } - \underline{ 14 } - \underline{ \hspace{.1in} } \\
+ \hline
+\underline{ \hspace{.1in} } - \underline{ 13 } - \underline{ 14 }&
+\underline{ \hspace{.1in} } - \underline{ \hspace{.1in} } - \underline{ 6 } &  
+\underline{ \hspace{.1in} } - \underline{ \hspace{.1in} } - \underline{ 7 } \\
+ \hline
+ \underline{ 3 } - \underline{ 4 } - \underline{ \hspace{.1in} }&  
+ \underline{ \textcircled{\hspace{.1in}} } - \underline{ \hspace{.1in} } - \underline{ 10 } &  
+ \underline{ \hspace{.1in} } - \underline{ \hspace{.1in} } - \underline{ 11 } \\
+ \hline
+ \underline{ \textcircled{\hspace{.1in}} } - \underline{ 9 } - \underline{ \hspace{.1in} }&  
+ \underline{ \hspace{.1in} } - \underline{ \hspace{.1in} } - \underline{ 15 } &  
+ \underline{ 4 } - \underline{ \textcircled{\hspace{.1in}} } - \underline{ 13 } \\
+ \hline
+ \underline{ \hspace{.1in} } - \underline{ \hspace{.1in} } - \underline{ \hspace{.1in} }&  
+ \underline{ 8 } - \underline{ \hspace{.1in} } - \underline{ \hspace{.1in} } &  
+ \underline{ \hspace{.1in} } - \underline{ \hspace{.1in} } - \underline{ 12 } \\
+ \hline
+\end{tabular}
+\end{center}
+
+\end{document}
