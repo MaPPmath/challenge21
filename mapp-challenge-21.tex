@@ -1,6 +1,7 @@
 \documentclass{article}
 \usepackage[margin=1in,bottom=1.5in,footskip=1in]{geometry}
 
+\usepackage{multicol}
 \usepackage{fancyhdr}
 \usepackage{lastpage}
 \pagestyle{fancy}
@@ -9,6 +10,13 @@
 \rfoot{\includegraphics[height=5em]{square_bw}}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
+
+
+
+\newcommand{\morseDit}{{\large .}}
+\newcommand{\morseDah}{{\large -}}
+
+\usepackage[puttinydots]{braille}
 
 
 % set font encoding for PDFLaTeX, XeLaTeX, or LuaTeX
@@ -133,7 +141,7 @@
 \begin{center}
 \includegraphics[width=0.8\linewidth]{banner_bw}
 
-\Large Challenge '21 Online: \textit{Enter the Array}
+\Large MaPP Challenge '21: \textit{Enter the Array}
 
 Player Book
 \end{center}
@@ -142,17 +150,20 @@ Player Book
 
 \noindent
 Print a copy of this book for each
-player before your game begins!
-You can look through the pages before the game
-if you like, but note that you
-won't make much progress without the clues revealed
-in the ClueKeeper app.
+player before your game begins, or set up
+each page in a virtual whiteboard.
+You can look through these pages before the game begins,
+but you'll need the clues provided in the ClueKeeper app
+to make much progress.
 
 \vspace{1em}
 
 \noindent
 Have fun!
 
+\vfill
+
+{\footnotesize PDF last updated: \today}
 
 \newpage
 
@@ -410,19 +421,17 @@ discovered one of the Designer's hidden passwords.
 
 \begin{center}\LARGE
 \begin{tabular}{rclrcl}
- SE$_\star$ & =&966 & \hspace{3em}\underline{\hspace{3cm}}$_\star$ & =&34636 \\
- QUE$_\bullet$ & =&25930 & \underline{\hspace{3cm}}$_\bullet$ & =&12557974 \\
- NCE$_\ominus$ & =&3?169 & \underline{\hspace{3cm}}$_\ominus$ & =&72536066 \\
+\underline{\hspace{3cm}}$_\star$ & =&34636 \\
+\underline{\hspace{3cm}}$_\bullet$ & =&12557974 \\
+\underline{\hspace{3cm}}$_\ominus$ & =&72536066 \\
 \vspace*{0.5cm} \\
- INI$_\triangleleft$ & =&408$\odot$1 & \underline{\hspace{3cm}}$_\triangleleft$ & =&65340886 \\
- TIA$_\vee$ & =&382$\wedge$2 & \underline{\hspace{3cm}}$_\vee$ & =&37390 \\
- TED$_\circ$ & =&32$\otimes\ast$6 &  \underline{\hspace{3cm}}$_\circ$ & =&1258627316651 \\
+\underline{\hspace{3cm}}$_\triangleleft$ & =&65340886 \\
+\underline{\hspace{3cm}}$_\vee$ & =&37390 \\
+\underline{\hspace{3cm}}$_\circ$ & =&1258627316651 \\
+\vspace*{0.5cm} \\
+\underline{\hspace{4cm}}\(_x\) & = &
+14\(\otimes\)70\(\odot\)1?466\(\wedge\)0\(\ast\)3
 \end{tabular}
-\end{center}
-\vspace*{1cm}
-\begin{center}\LARGE
-\underline{\hspace{4cm}}\(_x\) =
-14\(\otimes\)70\(\odot\)1?466\(\wedge\)0\(\ast\)4
 \end{center}
 
 \vfill
@@ -446,12 +455,27 @@ to be missing). Become fluent in this messaging
 scheme, and you should be able to decrypt one of the Designer's
 hidden passwords!
 
-\[HUMAN_{34} =
-17\cdot34^4+30\cdot34^3+
-22\cdot34^2+10\cdot34+23 = 23922627\]
-\[ACTNOW_{36} =
-10\cdot36^5+12\cdot36^4+29\cdot36^3+
-23\cdot36^2+24\cdot36+32 = 626200880\]
+\vspace{0.5cm}
+\begin{center}\LARGE
+\begin{tabular}{rcl}
+ HUMAN$_{34}$ &=&
+$17\cdot34^4+30\cdot34^3+22\cdot34^2$\\&&
+$+10\cdot34+23$ \\&=& 23922627 \\
+\vspace*{0.5cm} \\
+ ACTNOW$_{36}$ &=&
+$10\cdot36^5+12\cdot36^4+29\cdot36^3$\\&&
+$+23\cdot36^2+24\cdot36+32$ \\ &=& 626200880\\
+\vspace*{0.5cm} \\
+ SE$_\star$ & =&966 \\
+ QUE$_\bullet$ & =&25930 \\
+ NCE$_\ominus$ & =&3?169 \\
+\vspace*{0.5cm} \\
+ INI$_\triangleleft$ & =&408$\odot$1 \\
+ TIA$_\vee$ & =&382$\wedge$2 \\
+ TED$_\circ$ & =&32$\otimes\ast$6 \\
+\end{tabular}
+\end{center}
+
 }
 
 \newpage
@@ -768,8 +792,10 @@ of an "unseen" GRAY.
 
 \vfill
 
+
+
 \begin{center}
-\includegraphics[width=\linewidth]{early-drafts/IndependentSet26.png}
+\includegraphics[width=\linewidth]{early-drafts/independent-graph.png}
 \end{center}
 
 \vfill
@@ -1065,4 +1091,351 @@ humans free.
 - Miller’s tie color begins with the same letter as his password.
 }
 
+\newpage
+
+\puzzleTitle{Reference Page}
+
+\vfill
+
+\begin{multicols}{2}
+\begin{center}\small
+  \begin{tabular}{c|c|c|c|c}
+    \footnotesize
+    Letter &
+    \footnotesize
+      Decimal &
+    \footnotesize
+      Binary &
+    \footnotesize
+      Morse &
+    \footnotesize
+      Braille \\\hline
+%    \footnotesize
+%      ROT13\\\hline
+    A &
+      1 &
+      00001 &
+      \morseDit\morseDah &
+      \braille{a}\\
+%      N\\
+    B &
+      2 &
+      00010 &
+      \morseDah\morseDit\morseDit\morseDit &
+      \braille{b}\\
+%      O\\
+    C &
+      3 &
+      00011 &
+      \morseDah\morseDit\morseDah\morseDit &
+      \braille{c}\\
+%      P\\
+    D &
+      4 &
+      00100 &
+      \morseDah\morseDit\morseDit &
+      \braille{d}\\
+%      Q\\
+    E &
+      5 &
+      00101 &
+      \morseDit &
+      \braille{e}\\
+%      R\\
+    F &
+      6 &
+      00110 &
+      \morseDit\morseDit\morseDah\morseDit &
+      \braille{f}\\
+%      S\\
+    G &
+      7 &
+      00111 &
+      \morseDah\morseDah\morseDit &
+      \braille{g}\\
+%      T\\
+    H &
+      8 &
+      01000 &
+      \morseDit\morseDit\morseDit\morseDit &
+      \braille{h}\\
+%      U\\
+    I &
+      9 &
+      01001 &
+      \morseDit\morseDit &
+      \braille{i}\\
+%      V\\
+    J &
+      10 &
+      01010 &
+      \morseDit\morseDah\morseDah\morseDah &
+      \braille{j}\\
+%      W\\
+    K &
+      11 &
+      01011 &
+      \morseDah\morseDit\morseDah &
+      \braille{k}\\
+%      X\\
+    L &
+      12 &
+      01100 &
+      \morseDit\morseDah\morseDit\morseDit &
+      \braille{l}\\
+%      Y\\
+    M &
+      13 &
+      01101 &
+      \morseDah\morseDah &
+      \braille{m}\\
+%      Z\\
+  \end{tabular}
+
+  \begin{tabular}{c|c|c|c|c}
+    \footnotesize
+    Letter &
+    \footnotesize
+      Decimal &
+    \footnotesize
+      Binary &
+    \footnotesize
+      Morse &
+    \footnotesize
+      Braille \\\hline
+%    \footnotesize
+%      ROT13\\\hline
+    N &
+      14 &
+      01110 &
+      \morseDah\morseDit &
+      \braille{n}\\
+%      A\\
+    O &
+      15 &
+      01111 &
+      \morseDah\morseDah\morseDah &
+      \braille{o}\\
+%      B\\
+    P &
+      16 &
+      10000 &
+      \morseDit\morseDah\morseDah\morseDit &
+      \braille{p}\\
+%      C\\
+    Q &
+      17 &
+      10001 &
+      \morseDah\morseDah\morseDit\morseDah &
+      \braille{q}\\
+%      D\\
+    R &
+      18 &
+      10010 &
+      \morseDit\morseDah\morseDit &
+      \braille{r}\\
+%      E\\
+    S &
+      19 &
+      10011 &
+      \morseDit\morseDit\morseDit &
+      \braille{s}\\
+%      F\\
+    T &
+      20 &
+      10100 &
+      \morseDah &
+      \braille{t}\\
+%      G\\
+    U &
+      21 &
+      10101 &
+      \morseDit\morseDit\morseDah &
+      \braille{u}\\
+%      H\\
+    V &
+      22 &
+      10110 &
+      \morseDit\morseDit\morseDit\morseDah &
+      \braille{v}\\
+%      I\\
+    W &
+      23 &
+      10111 &
+      \morseDit\morseDah\morseDah &
+      \braille{w}\\
+%      J\\
+    X &
+      24 &
+      11000 &
+      \morseDah\morseDit\morseDit\morseDah &
+      \braille{x}\\
+%      K\\
+    Y &
+      25 &
+      11001 &
+      \morseDah\morseDit\morseDah\morseDah &
+      \braille{y}\\
+%      L\\
+    Z &
+      26 &
+      11010 &
+      \morseDah\morseDah\morseDit\morseDit &
+      \braille{z}\\
+%      M\\
+  \end{tabular}
+\end{center}
+\end{multicols}
+
+\vfill
+
+\begin{multicols}{2}
+\(\sqrt 2 \approx 1.\)
+\(41421\)
+\(35623\)
+\(73095\)
+\(04880\)
+\(16887\)
+\(24209\)
+\(69807\)
+\(85696\)
+\(71875\)
+\(37694\)
+\(80731\)
+\(76679\)
+\(73799\)
+\(07324\)
+\(78462\)
+\(10703\)
+\(88503\)
+\(87534\)
+\(32764\)
+\(15727\)
+
+\vspace{1em}
+
+\(e \approx 2.\)
+\(71828\)
+\(18284\)
+\(59045\)
+\(23536\)
+\(02874\)
+\(71352\)
+\(66249\)
+\(77572\)
+\(47093\)
+\(69995\)
+\(95749\)
+\(66967\)
+\(62772\)
+\(40766\)
+\(30353\)
+\(54759\)
+\(45713\)
+\(82178\)
+\(52516\)
+\(64274\)
+
+\vspace{1em}
+
+\(\pi \approx 3.\)
+\(14159\)
+\(26535\)
+\(89793\)
+\(23846\)
+\(26433\)
+\(83279\)
+\(50288\)
+\(41971\)
+\(69399\)
+\(37510\)
+\(58209\)
+\(74944\)
+\(59230\)
+\(78164\)
+\(06286\)
+\(20899\)
+\(86280\)
+\(34825\)
+\(34211\)
+\(70679\)
+
+\columnbreak
+
+Prime numbers less than \(200\):
+
+\(2,\)
+\(3,\)
+\(5,\)
+\(7,\)
+\(11,\)
+\(13,\)
+\(17,\)
+\(19,\)
+\(23,\)
+\(29,\)
+\(31,\)
+\(37,\)
+\(41,\)
+\(43,\)
+\(47,\)
+\(53,\)
+\(59,\)
+\(61,\)
+\(67,\)
+\(71,\)
+\(73,\)
+\(79,\)
+\(83,\)
+\(89,\)
+\(97,\)
+\(101,\)
+\(103,\)
+\(107,\)
+\(109,\)
+\(113,\)
+\(127,\)
+\(131,\)
+\(137,\)
+\(139,\)
+\(149,\)
+\(151,\)
+\(157,\)
+\(163,\)
+\(167,\)
+\(173,\)
+\(179,\)
+\(181,\)
+\(191,\)
+\(193,\)
+\(197,\)
+\(199\)
+
+\vspace{2em}
+
+Square numbers less than \(400\):
+
+\(0,\)
+\(1,\)
+\(4,\)
+\(9,\)
+\(16,\)
+\(25,\)
+\(36,\)
+\(49,\)
+\(64,\)
+\(81,\)
+\(100,\)
+\(121,\)
+\(144,\)
+\(169,\)
+\(196,\)
+\(225,\)
+\(256,\)
+\(289,\)
+\(324,\)
+\(361\)
+\end{multicols}
+
+\vfill
 \end{document}
